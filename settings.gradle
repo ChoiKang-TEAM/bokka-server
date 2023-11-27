@@ -1,0 +1,4 @@
+rootProject.name = 'bokka'
+include 'server-api'
+include 'server-domain'
+include 'server-common'
