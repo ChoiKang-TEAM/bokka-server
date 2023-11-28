@@ -1,5 +1,6 @@
 dependencies {
 	implementation project(":server-domain")
+	implementation project(":server-common")
 }
 
 bootJar { enabled=true }
