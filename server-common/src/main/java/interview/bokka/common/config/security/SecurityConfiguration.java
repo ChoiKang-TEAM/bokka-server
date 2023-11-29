@@ -1,4 +1,4 @@
-package interview.bokka.common.security;
+package interview.bokka.common.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
