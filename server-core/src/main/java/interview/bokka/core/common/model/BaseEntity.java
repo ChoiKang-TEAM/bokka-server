@@ -1,4 +1,4 @@
-package interview.bokka.common.auditing;
+package interview.bokka.core.common.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity {
-
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createAt;

@@ -1,6 +1,5 @@
-package interview.bokka.domain.quiz.entity;
-
-import interview.bokka.common.auditing.BaseEntity;
+package interview.bokka.core.domain.quiz.entity;
+import interview.bokka.core.common.model.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

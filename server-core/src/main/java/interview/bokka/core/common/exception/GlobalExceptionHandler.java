@@ -1,4 +1,4 @@
-package interview.bokka.common.exception;
+package interview.bokka.core.common.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

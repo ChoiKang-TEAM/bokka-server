@@ -1,4 +1,4 @@
-package interview.bokka.common.exception;
+package interview.bokka.core.common.exception;
 
 public record ApplicationErrorResponse(
     String code,

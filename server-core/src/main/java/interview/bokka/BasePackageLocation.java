@@ -1,4 +1,4 @@
-package interview.bokka.common;
+package interview.bokka;
 
 public interface BasePackageLocation {
 }

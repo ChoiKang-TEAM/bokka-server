@@ -1,6 +1,0 @@
-dependencies {
-    implementation project(":server-common")
-}
-
-bootJar { enabled=false }
-jar { enabled=true }
