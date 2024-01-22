@@ -1,6 +1,7 @@
 package interview.bokka.api.quiz.controller;
 
 import interview.bokka.api.quiz.service.QuizService;
+import interview.bokka.core.common.dto.ResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,6 @@ public class QuizController {
     public ResponseEntity<?> getQuiz(
             @PathVariable Long quizId
     ) {
-        return new ResponseEntity<>(quizService.getDetail(quizId), HttpStatus.OK);
+        return ResponseDto.ok(quizService.getDetail(quizId));
     }
 }

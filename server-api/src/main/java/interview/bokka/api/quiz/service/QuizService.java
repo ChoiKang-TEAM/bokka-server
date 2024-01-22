@@ -15,7 +15,11 @@ public class QuizService {
 
     public QuizRespDto getDetail(Long quizId) {
         Optional<Quiz> optionalQuiz = quizRepository.findById(quizId);
-        Quiz quiz = optionalQuiz.get();
-        return QuizRespDto.of(1000,quiz);
+        Quiz quiz = optionalQuiz.orElseGet(() -> null);
+        if(quiz == null) {
+            return QuizRespDto.of(1001);
+        } else {
+            return QuizRespDto.of(1000,quiz);
+        }
     }
 }
