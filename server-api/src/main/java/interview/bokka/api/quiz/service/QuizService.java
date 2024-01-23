@@ -1,6 +1,7 @@
 package interview.bokka.api.quiz.service;
 
 import interview.bokka.core.domain.quiz.dto.QuizRespDto;
+import interview.bokka.core.domain.quiz.dto.QuizSolveDto;
 import interview.bokka.core.domain.quiz.entity.Quiz;
 import interview.bokka.core.domain.quiz.repository.QuizRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,5 +22,12 @@ public class QuizService {
         } else {
             return QuizRespDto.of(1000,quiz);
         }
+    }
+
+    public QuizSolveDto.QuizSolveResponse solveQuiz(
+            Long quizId,
+            QuizSolveDto.QuizSolveRequest request
+    ) {
+        return QuizSolveDto.QuizSolveResponse.of(quizRepository.ExistsByIdAndAnswer(quizId, request.getAnswer()));
     }
 }
