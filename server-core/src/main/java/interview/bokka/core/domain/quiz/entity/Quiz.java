@@ -1,15 +1,16 @@
 package interview.bokka.core.domain.quiz.entity;
 import interview.bokka.core.common.model.BaseEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
 @Entity
 public class Quiz extends BaseEntity {
 
@@ -31,4 +32,7 @@ public class Quiz extends BaseEntity {
 
     @Column(name = "level", nullable = false)
     private int level;
+
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
+    private List<QuizLike> quizLikes = new ArrayList<>();
 }
