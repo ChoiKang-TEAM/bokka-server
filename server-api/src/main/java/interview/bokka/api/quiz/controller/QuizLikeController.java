@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuizLikeController {
     private final QuizLikeService quizLikeService;
 
-    @Operation(summary = "퀴즈 좋아요")
+    @Operation(summary = "퀴즈 좋아요", description = "주어진 퀴즈 ID에 해당하는 퀴즈를 좋아요 합니다.")
     @PostMapping("/quizzes/{quizId}/like")
     public ResponseEntity<?> like(
             @PathVariable Long quizId
